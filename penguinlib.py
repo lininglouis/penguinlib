@@ -1,5 +1,6 @@
 import os
 import re
+import magic
 
 def get_string_no_suffix(string):
     # input xxxx/yyy.txt 
