@@ -16,7 +16,9 @@ def getImageShape(image_path):
 	res = re.search(string=metaStr, pattern='height=(\d+).*width=(\d+)')
 	if res:
 		height, width = res.groups()
-	return [int(height), int(width)]
+		return [int(height), int(width)]
+	else:
+		return [None, None]
 
 def changeSuffixTo(string, destSuffix):
 	#input  function(xxx//xxx.jpeg, destSuffix='txt'):
