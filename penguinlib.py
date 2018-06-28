@@ -3,7 +3,7 @@ import os
 def list_full_path(dirPath):
 	file_paths = []
 	for f in os.listdir(dirPath):
-		file_paths.append(f)
+		file_paths.append(os.path.join(dirPath,f))
 	return file_paths
 
 def list_all_files_recursively(dirPath):
