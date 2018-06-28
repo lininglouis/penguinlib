@@ -1,5 +1,17 @@
 import os
 
+
+def get_string_no_suffix(string):
+    # input xxxx/yyy.txt 
+    # output xxx/yyy
+    res = re.findall(pattern='(.*)\..*', string='xxx//xxx.txt')
+    if res:
+        return res[0]
+    else:
+        raise ValueError('no suffix detected')
+
+
+
 def list_full_path(dirPath):
 	file_paths = []
 	for f in os.listdir(dirPath):
