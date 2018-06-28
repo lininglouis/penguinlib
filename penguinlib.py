@@ -11,7 +11,7 @@ def get_string_no_suffix(string):
 		return None
 
 def changeSuffixTo(string, destSuffix)
-	#input  function(xxx//xxx.jpeg, destSuffix='txt')
+	#input  function(xxx//xxx.jpeg, destSuffix='txt'):
 	#output xxx//xxx.txt
 	return get_string_no_suffix(string) + '.' + destSuffix
 
