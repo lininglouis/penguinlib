@@ -4,13 +4,16 @@ import os
 def get_string_no_suffix(string):
     # input xxxx/yyy.txt 
     # output xxx/yyy
-    res = re.findall(pattern='(.*)\..*', string=string)
-    if res:
-        return res[0]
-    else:
-        return None
+	res = re.findall(pattern='(.*)\..*', string=string)
+	if res:
+		return res[0]
+	else:
+		return None
 
-
+def changeSuffixTo(string, destSuffix)
+	#input  function(xxx//xxx.jpeg, destSuffix='txt')
+	#output xxx//xxx.txt
+	return get_string_no_suffix(string) + '.' + destSuffix
 
 def list_full_path(dirPath):
 	file_paths = []
