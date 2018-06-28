@@ -13,3 +13,7 @@ def list_all_files_recursively(dirPath):
 			file_paths.append(os.path.join(root, name))
 	return file_paths
 
+
+def mkdir_if_not_exists(dirPath):
+	if not os.path.exists(dirPath):
+		os.makedirs(dirPath)
