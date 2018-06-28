@@ -3,9 +3,9 @@ pip install git+git://github.com/lininglouis/penguinlib
 
 
 #### Dependency
-cv2
-magic(for fast getting image shape)
-
+. cv2
+. magic(for fast getting image shape)
+  pip install git+git://github.com/ahupp/python-magic
 #### To Do
 1. helper functions for list files with regex expression
 2. utils python scripts for convert labels between bbox, yolo, coco, voc
