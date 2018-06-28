@@ -11,6 +11,13 @@ def get_string_no_suffix(string):
 	else:
 		return None
 
+def getImageShape(image_path):
+	metaStr = magic.from_file(image_path)
+	res = re.search(string=metaStr, pattern='height=(\d+).*width=(\d+)')
+	if res:
+		height, width = res.groups()
+	return [int(height), int(width)]
+
 def changeSuffixTo(string, destSuffix):
 	#input  function(xxx//xxx.jpeg, destSuffix='txt'):
 	#output xxx//xxx.txt
