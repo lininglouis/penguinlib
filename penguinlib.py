@@ -4,7 +4,7 @@ import os
 def get_string_no_suffix(string):
     # input xxxx/yyy.txt 
     # output xxx/yyy
-    res = re.findall(pattern='(.*)\..*', string='xxx//xxx.txt')
+    res = re.findall(pattern='(.*)\..*', string=string)
     if res:
         return res[0]
     else:
