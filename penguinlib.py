@@ -8,7 +8,7 @@ def get_string_no_suffix(string):
     if res:
         return res[0]
     else:
-        raise ValueError('no suffix detected')
+        return None
 
 
 
