@@ -45,3 +45,16 @@ def list_all_files_recursively(dirPath):
 def mkdir_if_not_exists(dirPath):
 	if not os.path.exists(dirPath):
 		os.makedirs(dirPath)
+		
+		
+def put_boxes(boxes, img):
+    img_canvas = img.copy()
+    for box in boxes:
+        x1, y1, x2,y2 = box[:4]
+        x1 = int(x1)
+        y1 = int(y1)
+        x2 = int(x2)
+        y2 = int(y2)
+        img_canvas = cv2.rectangle(img_canvas, (x1, y1), (x2, y2), (255,0,0), 2)
+    return img_canvas
+
