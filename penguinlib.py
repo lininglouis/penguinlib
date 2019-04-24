@@ -2,6 +2,8 @@ import os
 import re
 import  magic
 
+
+
 def get_string_no_suffix(string):
     # input xxxx/yyy.txt 
     # output xxx/yyy
@@ -57,4 +59,10 @@ def put_boxes(boxes, img):
         y2 = int(y2)
         img_canvas = cv2.rectangle(img_canvas, (x1, y1), (x2, y2), (255,0,0), 2)
     return img_canvas
+
+
+def writelines(lines, filename):
+    with open(filename, 'w') as f:
+        for line in lines:
+            f.write(line + '\n')
 
